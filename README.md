@@ -1,79 +1,84 @@
-SampleAPI - Minimal Web API with MongoDB
+## SampleAPI - Minimal Web API with MongoDB
 
 This project demonstrates how to create a minimal Web API using ASP.NET Core and integrate it with MongoDB for data storage. The implementation is based on the official tutorial and extended to support basic CRUD operations with MongoDB.
 
-Key Features
+### Key Features
 
-CRUD Operations: Supports basic actions like Create, Read, Update, and Delete, providing full management capabilities for book collections.
+- **CRUD Operations**: Supports basic actions like Create, Read, Update, and Delete, providing full management capabilities for book collections.
 
-MongoDB Integration: Utilizes MongoDB as the database for efficient and scalable data storage.
+- **MongoDB Integration**: Utilizes MongoDB as the database for efficient and scalable data storage.
 
-Dependency Injection: Configures services using ASP.NET Core's DI system.
+- **Dependency Injection**: Configures services using ASP.NET Core's DI system.
 
-Swagger Integration: Provides an interactive UI for testing API endpoints.
+- **Swagger Integration**: Provides an interactive UI for testing API endpoints.
 
-Requirements
+### Requirements
 
-.NET 6.0 or later
+- .NET 6.0 or later
 
-MongoDB installed locally or accessible remotely
+- MongoDB installed locally or accessible remotely
 
-MongoDB Compass (optional for database management)
+- MongoDB Compass (optional for database management)
 
-Project Setup
+### Project Setup
 
-Clone this repository:
+1. Clone this repository:
 
-git clone https://github.com/PhamTrung1204/sampleapi.git
+   ```bash
+   git clone https://github.com/PhamTrung1204/sampleapi.git
+   ```
 
-Open the project in Visual Studio.
+2. Open the project in Visual Studio.
 
-Install necessary NuGet packages:
+3. Install necessary NuGet packages:
 
-dotnet add package MongoDB.Driver
+   ```bash
+   dotnet add package MongoDB.Driver
+   ```
 
-Configure MongoDB settings in appsettings.json:
+4. Configure MongoDB settings in `appsettings.json`:
 
-{
-  "BookStoreDatabase": {
-    "ConnectionString": "your_mongodb_connection_string",
-    "DatabaseName": "BookStoreDB",
-    "BooksCollectionName": "Books"
-  }
-}
+   ```json
+   {
+     "BookStoreDatabase": {
+       "ConnectionString": "your_mongodb_connection_string",
+       "DatabaseName": "BookStoreDB",
+       "BooksCollectionName": "Books"
+     }
+   }
+   ```
 
-Build and run the application.
+5. Build and run the application.
 
-API Endpoints
+### API Endpoints
 
 The following endpoints are available:
 
-GET /api/Books: Retrieves all books.
+- `GET /api/Books`: Retrieves all books.
+- `GET /api/Books/{id}`: Retrieves a specific book by ID.
+- `POST /api/Books`: Adds a new book.
+- `PUT /api/Books/{id}`: Updates an existing book.
+- `DELETE /api/Books/{id}`: Deletes a book.
 
-GET /api/Books/{id}: Retrieves a specific book by ID.
+### How to Use
 
-POST /api/Books: Adds a new book.
+1. Run the application:
 
-PUT /api/Books/{id}: Updates an existing book.
+   ```bash
+   dotnet run
+   ```
 
-DELETE /api/Books/{id}: Deletes a book.
+2. Open Swagger UI in your browser:
 
-How to Use
+   [https://localhost:7295/swagger/index.html](https://localhost:7295/swagger/index.html)
 
-Run the application:
+3. Use the Swagger interface to test API endpoints.
 
-dotnet run
-
-Open Swagger UI in your browser:
-
-https://localhost:7295/swagger/index.html
-
-Use the Swagger interface to test API endpoints.
-
-Sample Data
+### Sample Data
 
 The database includes the following initial documents:
 
+```json
 [
   {
     "Name": "Design Patterns",
@@ -88,23 +93,21 @@ The database includes the following initial documents:
     "Author": "Robert C. Martin"
   }
 ]
+```
 
-Achievements
+### Achievements
 
-Successfully integrated MongoDB with ASP.NET Core.
+- Successfully integrated MongoDB with ASP.NET Core.
+- Developed a minimal Web API with CRUD operations.
+- Gained experience in working with dependency injection and Swagger.
 
-Developed a minimal Web API with CRUD operations.
+### Next Steps
 
-Gained experience in working with dependency injection and Swagger.
+- Add authentication and authorization.
+- Implement a persistent database solution (e.g., Azure Cosmos DB or AWS DynamoDB).
+- Create unit tests for API endpoints.
 
-Next Steps
+### Contributors
 
-Add authentication and authorization.
+- **Trung Pham** ([GitHub](https://github.com/PhamTrung1204))
 
-Implement a persistent database solution (e.g., Azure Cosmos DB or AWS DynamoDB).
-
-Create unit tests for API endpoints.
-
-Contributors
-
-Trung Pham (GitHub)
