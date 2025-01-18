@@ -70,7 +70,7 @@ The following endpoints are available:
 
 2. Open Swagger UI in your browser:
 
-   [https://localhost:7295/swagger/index.html](https://localhost:7295/swagger/index.html)
+   [https://localhost:7221/swagger/index.html](https://localhost:7221/swagger/index.html)
 
 3. Use the Swagger interface to test API endpoints.
 
